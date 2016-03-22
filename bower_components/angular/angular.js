@@ -11454,7 +11454,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
         var status = xhr.status === 1223 ? 204 : xhr.status;
 
         // fix status code when it is 0 (0 status is undocumented).
-        // Occurs when accessing file resources or on Android 4.1 stock browser
+        // Occurs when accessing file images or on Android 4.1 stock browser
         // while retrieving files from application cache.
         if (status === 0) {
           status = response ? 200 : urlResolve(url).protocol == 'file' ? 404 : 0;
